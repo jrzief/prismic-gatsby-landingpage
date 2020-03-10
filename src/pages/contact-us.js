@@ -78,7 +78,7 @@ const ContactUs = props => {
         <Form
           name="contact-us"
           method="POST"
-          data-netify="true"
+          data-netlify="true"
           action="/contact-success"
         >
           <input type="hidden" name="form-name" value="contact-us" />
@@ -88,6 +88,7 @@ const ContactUs = props => {
                 return (
                   <div key={i}>
                     <textarea
+                      name={field.field_name}
                       required={field.required === "Yes"}
                       placeholder={field.field_name}
                     />
@@ -98,6 +99,7 @@ const ContactUs = props => {
                   <div key={i}>
                     <input
                       type={field.field_type}
+                      name={field.field_name}
                       required={field.required === "Yes"}
                       placeholder={field.field_name}
                     />
